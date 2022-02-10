@@ -1,24 +1,40 @@
-import './style.css'
+import Split from "split-grid";
+import "./style.css";
 
-const $ = selector => document.querySelector(selector)
+const $ = (selector) => document.querySelector(selector);
 
-const $js = $('#js')
-const $css = $('#css')
-const $html = $('#html')
+Split({
+  columnGutters: [
+    {
+      track: 1,
+      element: $(".gutter-col-1"),
+    },
+  ],
+  rowGutters: [
+    {
+      track: 1,
+      element: $(".gutter-row-1"),
+    },
+  ],
+});
 
-$js.addEventListener('input', update)
-$css.addEventListener('input', update)
-$html.addEventListener('input', update)
+const $js = $("#js");
+const $css = $("#css");
+const $html = $("#html");
+
+$js.addEventListener("input", update);
+$css.addEventListener("input", update);
+$html.addEventListener("input", update);
 
 function update() {
-  const html = createHTML()
-  $('iframe').setAttribute('srcdoc', html)
+  const html = createHTML();
+  $("iframe").setAttribute("srcdoc", html);
 }
 
 const createHTML = () => {
-  const html = $html.value
-  const css = $css.value
-  const js = $js.value
+  const html = $html.value;
+  const css = $css.value;
+  const js = $js.value;
   return `
     <!DOCTYPE html>
     <html lang="es">
@@ -34,5 +50,5 @@ const createHTML = () => {
       ${html}
     </body>
     </html>
-  `
-}
+  `;
+};

@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "split-grid": "^1.0.11"
   }
 }
