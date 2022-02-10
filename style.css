@@ -51,6 +51,22 @@ textarea:focus {
   outline: none;
 }
 
+.editor {
+  position: relative;
+}
+
+.editor::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+}
+
 #js {
   background-image: url('/assets/js.svg');
 }
@@ -59,7 +75,7 @@ textarea:focus {
   background-image: url('/assets/css.svg');
 }
 
-#html {
+#html::after {
   background-image: url('/assets/html.svg');
 }
 
@@ -90,3 +106,8 @@ textarea:focus {
   grid-row: 2;
 }
 
+/* Monaco Editor */
+
+/* .monaco-editor {
+  padding-top: 24px;
+} */

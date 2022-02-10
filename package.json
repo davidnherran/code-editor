@@ -1,19 +1,20 @@
 {
   "name": "code-editor",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "standard": "^16.0.4",
-    "vite": "^2.8.0"
+    "standard": "16.0.4",
+    "vite": "2.8.0"
   },
   "dependencies": {
-    "js-base64": "^3.7.2",
-    "split-grid": "^1.0.11"
+    "js-base64": "3.7.2",
+    "monaco-editor": "0.26.1",
+    "split-grid": "1.0.11"
   },
   "eslintConfig": {
     "extends": [
