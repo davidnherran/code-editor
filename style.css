@@ -34,6 +34,9 @@ iframe {
 
 textarea {
   background-color: #242a38;
+  background-repeat: no-repeat;
+  background-size: 36px;
+  background-position: calc(100% - 20px) calc(100% - 20px);
   width: 100%;
   height: 100%;
   padding: 24px;
@@ -48,6 +51,18 @@ textarea:focus {
   outline: none;
 }
 
+#js {
+  background-image: url('/assets/js.svg');
+}
+
+#css {
+  background-image: url('/assets/css.svg');
+}
+
+#html {
+  background-image: url('/assets/html.svg');
+}
+
 .grid {
   display: grid;
   grid-template-rows: 1fr 10px 1fr;
@@ -58,6 +73,7 @@ textarea:focus {
 .gutter-col {
   grid-row: 1/-1;
   cursor: col-resize;
+  background-color: #1e222f;
 }
 
 .gutter-col-1 {
@@ -67,8 +83,10 @@ textarea:focus {
 .gutter-row {
   grid-column: 1/-1;
   cursor: row-resize;
+  background-color: #1e222f;
 }
 
 .gutter-row-1 {
   grid-row: 2;
 }
+

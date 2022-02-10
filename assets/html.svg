@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="330" version="1.1" viewBox="0 0 79.375 87.313" xmlns="http://www.w3.org/2000/svg">
+ <rect x="10.243" y="9.9214" width="56.117" height="63.63" style="fill-rule:evenodd;fill:#fff;stroke-width:.26458"/>
+ <g transform="matrix(.19745 0 0 .19114 -5.4112 0)" style="fill:#e44f26">
+  <g style="fill:#e44f26">
+   <path d="m27.405 0 36.542 410.56 163.88 46.244 165.02-46.244 36.547-410.56zm322.62 133.9h-192.43l4.283 51.676h183.87l-14.273 155.32-102.5 28.26v0.287h-1.143l-103.36-28.547-6.28-79.367h49.965l3.711 39.971 55.959 15.126 56.245-15.126 6.283-65.097h-174.73l-13.418-152.46h252.39z" style="fill:#e44f26"/>
+  </g>
+ </g>
+</svg>
