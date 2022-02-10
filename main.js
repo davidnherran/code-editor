@@ -6,11 +6,11 @@ import CssWorker from 'monaco-editor/esm/vs/language/css/css.worker?worker'
 import JsWorker from 'monaco-editor/esm/vs/language/typescript/ts.worker?worker'
 import './style.css'
 
-window.MonacoEnviorement = {
+window.MonacoEnvironment = {
   getWorker (_, label) {
     if (label === 'html') return new HtmlWorker()
+    if (label === 'javascript') return new JsWorker()
     if (label === 'css') return new CssWorker()
-    if (label === 'typescript' || label === 'javascript') return new JsWorker()
   }
 }
 
@@ -39,27 +39,30 @@ const { pathname } = window.location
 
 const [rawHtml, rawCss, rawJs] = pathname.slice(1).split('%7C')
 
-const html = decode(rawHtml)
-const css = decode(rawCss)
-const js = decode(rawJs)
+const html = rawHtml ? decode(rawHtml) : ''
+const css = rawCss ? decode(rawCss) : ''
+const js = rawJs ? decode(rawJs) : ''
+
+const COMMON_EDITOR_OPTIONS = {
+  automaticLayout: true,
+  fontSize: 17,
+  theme: 'vs-dark'
+}
 
 const htmlEditor = monaco.editor.create($html, {
   language: 'html',
-  theme: 'vs-dark',
   value: html,
-  fontSize: 17
+  ...COMMON_EDITOR_OPTIONS
 })
 const cssEditor = monaco.editor.create($css, {
   language: 'css',
-  theme: 'vs-dark',
   value: css,
-  fontSize: 17
+  ...COMMON_EDITOR_OPTIONS
 })
 const jsEditor = monaco.editor.create($js, {
   language: 'javascript',
-  theme: 'vs-dark',
   value: js,
-  fontSize: 17
+  ...COMMON_EDITOR_OPTIONS
 })
 
 htmlEditor.onDidChangeModelContent(update)
