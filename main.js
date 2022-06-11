@@ -5,7 +5,6 @@ import HtmlWorker from 'monaco-editor/esm/vs/language/html/html.worker?worker'
 import CssWorker from 'monaco-editor/esm/vs/language/css/css.worker?worker'
 import JsWorker from 'monaco-editor/esm/vs/language/typescript/ts.worker?worker'
 import './style.css'
-
 window.MonacoEnvironment = {
   getWorker (_, label) {
     if (label === 'html') return new HtmlWorker()
@@ -13,7 +12,6 @@ window.MonacoEnvironment = {
     if (label === 'css') return new CssWorker()
   }
 }
-
 const $ = (selector) => document.querySelector(selector)
 
 Split({

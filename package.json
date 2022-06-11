@@ -12,6 +12,7 @@
     "vite": "2.8.0"
   },
   "dependencies": {
+    "commitizen": "^4.2.4",
     "js-base64": "3.7.2",
     "monaco-editor": "0.26.1",
     "split-grid": "1.0.11"
